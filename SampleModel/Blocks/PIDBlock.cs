@@ -8,13 +8,10 @@ namespace SampleModel.Blocks
 {
     public class PIDBlock : BaseBlock
     {
-        private GainBlock gain;
-        private IntBlock integral;
-        private DiffBlock diff;
         private double prevX = 0;
         private double dt;
         private double intSum = 0;
-        private double ki = 0.000001;
+        private double ki = 1;
 
         public double UpLimit { get; set; } = 100;
         public double DownLimit { get; set; } = 0;
@@ -38,20 +35,28 @@ namespace SampleModel.Blocks
         public double Ki { get { return ki; } set { ki = value; } }
         public double Td { get; set; } = 0;
 
+        public const double B = 1;
+        public const double C = 1;
+
+
         public PIDBlock(double dt)
         {
             this.dt = dt;
         }
         public override double Calc(double x)
         {
-            if(ManualMode)
+
+            double u = 0;
+            if (ManualMode)
             {
-                intSum = (Umanual - K * x - Td * (x - prevX) / dt) / ki;
+                intSum = (Umanual - K * (x - u) - Td * ((x - u) - prevX) / dt) / ki;
             } else
             {
-                intSum += (prevX + x) * dt / 2;
+                intSum += (prevX + (x - u)) * dt / 2;
             }
-            double u = K * x + ki * intSum + Td * (x - prevX) / dt;
+            // регулятор з ваговими коефіцієнтами
+            u = K * (B * x - u) + ki * intSum + Td * ((C * x - u) - prevX) / dt;
+            //double u = K * x + ki * intSum + Td * (x - prevX) / dt;
             bool limited = false;
             if (u > UpLimit)
             {
@@ -65,7 +70,7 @@ namespace SampleModel.Blocks
             }
             if (ki != 0 && limited)
             {
-                intSum = (u - K * x - Td * (x - prevX) / dt) / ki;
+                intSum = (u - K * (B * x - u) - Td * ((C * x - u) - prevX) / dt) / ki;
             }
             prevX = x;
             U = u;
