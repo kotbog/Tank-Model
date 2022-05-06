@@ -29,6 +29,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -51,6 +54,23 @@
             this.Gout1 = new System.Windows.Forms.Label();
             this.Gin2 = new System.Windows.Forms.Label();
             this.Gin1 = new System.Windows.Forms.Label();
+            this.Ktb = new System.Windows.Forms.TextBox();
+            this.KbtnUp = new System.Windows.Forms.Button();
+            this.KbtnDown = new System.Windows.Forms.Button();
+            this.K = new System.Windows.Forms.Label();
+            this.Titb = new System.Windows.Forms.TextBox();
+            this.TibtnUp = new System.Windows.Forms.Button();
+            this.TibtnDown = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Tdtb = new System.Windows.Forms.TextBox();
+            this.TdbtnUp = new System.Windows.Forms.Button();
+            this.TdbtnDown = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Settb = new System.Windows.Forms.TextBox();
+            this.SetbtnUp = new System.Windows.Forms.Button();
+            this.SetbtnDown = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAuto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chMainPlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +78,7 @@
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStop.Location = new System.Drawing.Point(754, 337);
+            this.btnStop.Location = new System.Drawing.Point(754, 440);
             this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(56, 19);
@@ -70,7 +90,7 @@
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(693, 337);
+            this.btnStart.Location = new System.Drawing.Point(693, 440);
             this.btnStart.Margin = new System.Windows.Forms.Padding(2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(56, 19);
@@ -121,13 +141,29 @@
             this.chMainPlot.Location = new System.Drawing.Point(9, 60);
             this.chMainPlot.Margin = new System.Windows.Forms.Padding(2);
             this.chMainPlot.Name = "chMainPlot";
+            series1.BorderWidth = 3;
             series1.ChartArea = "chMainArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.LegendText = "Y";
             series1.Name = "seriesY";
+            series2.ChartArea = "chMainArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "SeriesX1";
+            series3.ChartArea = "chMainArea";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "SeriesX2";
+            series4.ChartArea = "chMainArea";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "SeriesX3";
             this.chMainPlot.Series.Add(series1);
-            this.chMainPlot.Size = new System.Drawing.Size(516, 273);
+            this.chMainPlot.Series.Add(series2);
+            this.chMainPlot.Series.Add(series3);
+            this.chMainPlot.Series.Add(series4);
+            this.chMainPlot.Size = new System.Drawing.Size(502, 359);
             this.chMainPlot.TabIndex = 5;
             // 
             // lbY
@@ -158,7 +194,7 @@
             // btnX1
             // 
             this.btnX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnX1.Location = new System.Drawing.Point(9, 337);
+            this.btnX1.Location = new System.Drawing.Point(9, 440);
             this.btnX1.Margin = new System.Windows.Forms.Padding(2);
             this.btnX1.Name = "btnX1";
             this.btnX1.Size = new System.Drawing.Size(56, 19);
@@ -170,7 +206,7 @@
             // btnX10
             // 
             this.btnX10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnX10.Location = new System.Drawing.Point(70, 337);
+            this.btnX10.Location = new System.Drawing.Point(70, 440);
             this.btnX10.Margin = new System.Windows.Forms.Padding(2);
             this.btnX10.Name = "btnX10";
             this.btnX10.Size = new System.Drawing.Size(56, 19);
@@ -242,7 +278,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(545, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(557, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,11 +312,183 @@
             this.Gin1.TabIndex = 12;
             this.Gin1.Text = "Gin1";
             // 
+            // Ktb
+            // 
+            this.Ktb.Location = new System.Drawing.Point(557, 214);
+            this.Ktb.Margin = new System.Windows.Forms.Padding(2);
+            this.Ktb.Name = "Ktb";
+            this.Ktb.Size = new System.Drawing.Size(48, 20);
+            this.Ktb.TabIndex = 2;
+            // 
+            // KbtnUp
+            // 
+            this.KbtnUp.Location = new System.Drawing.Point(610, 215);
+            this.KbtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.KbtnUp.Name = "KbtnUp";
+            this.KbtnUp.Size = new System.Drawing.Size(20, 19);
+            this.KbtnUp.TabIndex = 3;
+            this.KbtnUp.Text = ">";
+            this.KbtnUp.UseVisualStyleBackColor = true;
+            this.KbtnUp.Click += new System.EventHandler(this.KbtnUp_Click);
+            // 
+            // KbtnDown
+            // 
+            this.KbtnDown.Location = new System.Drawing.Point(532, 214);
+            this.KbtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.KbtnDown.Name = "KbtnDown";
+            this.KbtnDown.Size = new System.Drawing.Size(20, 19);
+            this.KbtnDown.TabIndex = 4;
+            this.KbtnDown.Text = "<";
+            this.KbtnDown.UseVisualStyleBackColor = true;
+            this.KbtnDown.Click += new System.EventHandler(this.KbtnDown_Click);
+            // 
+            // K
+            // 
+            this.K.AutoSize = true;
+            this.K.Location = new System.Drawing.Point(554, 199);
+            this.K.Name = "K";
+            this.K.Size = new System.Drawing.Size(14, 13);
+            this.K.TabIndex = 12;
+            this.K.Text = "K";
+            // 
+            // Titb
+            // 
+            this.Titb.Location = new System.Drawing.Point(557, 257);
+            this.Titb.Margin = new System.Windows.Forms.Padding(2);
+            this.Titb.Name = "Titb";
+            this.Titb.Size = new System.Drawing.Size(48, 20);
+            this.Titb.TabIndex = 2;
+            this.Titb.TextChanged += new System.EventHandler(this.TiChanged);
+            // 
+            // TibtnUp
+            // 
+            this.TibtnUp.Location = new System.Drawing.Point(610, 258);
+            this.TibtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.TibtnUp.Name = "TibtnUp";
+            this.TibtnUp.Size = new System.Drawing.Size(20, 19);
+            this.TibtnUp.TabIndex = 3;
+            this.TibtnUp.Text = ">";
+            this.TibtnUp.UseVisualStyleBackColor = true;
+            this.TibtnUp.Click += new System.EventHandler(this.TibtnUp_Click);
+            // 
+            // TibtnDown
+            // 
+            this.TibtnDown.Location = new System.Drawing.Point(532, 257);
+            this.TibtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.TibtnDown.Name = "TibtnDown";
+            this.TibtnDown.Size = new System.Drawing.Size(20, 19);
+            this.TibtnDown.TabIndex = 4;
+            this.TibtnDown.Text = "<";
+            this.TibtnDown.UseVisualStyleBackColor = true;
+            this.TibtnDown.Click += new System.EventHandler(this.TibtnDown_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(554, 242);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Ti";
+            // 
+            // Tdtb
+            // 
+            this.Tdtb.Location = new System.Drawing.Point(557, 299);
+            this.Tdtb.Margin = new System.Windows.Forms.Padding(2);
+            this.Tdtb.Name = "Tdtb";
+            this.Tdtb.Size = new System.Drawing.Size(48, 20);
+            this.Tdtb.TabIndex = 2;
+            // 
+            // TdbtnUp
+            // 
+            this.TdbtnUp.Location = new System.Drawing.Point(610, 300);
+            this.TdbtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.TdbtnUp.Name = "TdbtnUp";
+            this.TdbtnUp.Size = new System.Drawing.Size(20, 19);
+            this.TdbtnUp.TabIndex = 3;
+            this.TdbtnUp.Text = ">";
+            this.TdbtnUp.UseVisualStyleBackColor = true;
+            this.TdbtnUp.Click += new System.EventHandler(this.TdbtnUp_Click);
+            // 
+            // TdbtnDown
+            // 
+            this.TdbtnDown.Location = new System.Drawing.Point(532, 299);
+            this.TdbtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.TdbtnDown.Name = "TdbtnDown";
+            this.TdbtnDown.Size = new System.Drawing.Size(20, 19);
+            this.TdbtnDown.TabIndex = 4;
+            this.TdbtnDown.Text = "<";
+            this.TdbtnDown.UseVisualStyleBackColor = true;
+            this.TdbtnDown.Click += new System.EventHandler(this.TdbtnDown_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(554, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Td";
+            // 
+            // Settb
+            // 
+            this.Settb.Location = new System.Drawing.Point(693, 215);
+            this.Settb.Margin = new System.Windows.Forms.Padding(2);
+            this.Settb.Name = "Settb";
+            this.Settb.Size = new System.Drawing.Size(48, 20);
+            this.Settb.TabIndex = 2;
+            // 
+            // SetbtnUp
+            // 
+            this.SetbtnUp.Location = new System.Drawing.Point(746, 216);
+            this.SetbtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.SetbtnUp.Name = "SetbtnUp";
+            this.SetbtnUp.Size = new System.Drawing.Size(20, 19);
+            this.SetbtnUp.TabIndex = 3;
+            this.SetbtnUp.Text = ">";
+            this.SetbtnUp.UseVisualStyleBackColor = true;
+            this.SetbtnUp.Click += new System.EventHandler(this.SetbtnUp_Click);
+            // 
+            // SetbtnDown
+            // 
+            this.SetbtnDown.Location = new System.Drawing.Point(668, 215);
+            this.SetbtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.SetbtnDown.Name = "SetbtnDown";
+            this.SetbtnDown.Size = new System.Drawing.Size(20, 19);
+            this.SetbtnDown.TabIndex = 4;
+            this.SetbtnDown.Text = "<";
+            this.SetbtnDown.UseVisualStyleBackColor = true;
+            this.SetbtnDown.Click += new System.EventHandler(this.SetbtnDown_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(690, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "SetPoint";
+            // 
+            // btnAuto
+            // 
+            this.btnAuto.Location = new System.Drawing.Point(691, 299);
+            this.btnAuto.Name = "btnAuto";
+            this.btnAuto.Size = new System.Drawing.Size(75, 23);
+            this.btnAuto.TabIndex = 13;
+            this.btnAuto.Text = "Manual";
+            this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 366);
+            this.ClientSize = new System.Drawing.Size(819, 469);
+            this.Controls.Add(this.btnAuto);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.K);
             this.Controls.Add(this.Gin1);
             this.Controls.Add(this.Gin2);
             this.Controls.Add(this.Gout1);
@@ -292,18 +500,31 @@
             this.Controls.Add(this.chMainPlot);
             this.Controls.Add(this.btnDn2);
             this.Controls.Add(this.btnDn1);
+            this.Controls.Add(this.TdbtnDown);
+            this.Controls.Add(this.TibtnDown);
+            this.Controls.Add(this.SetbtnDown);
+            this.Controls.Add(this.KbtnDown);
             this.Controls.Add(this.btnDn);
             this.Controls.Add(this.btnUp2);
             this.Controls.Add(this.btnUp1);
             this.Controls.Add(this.tbX2);
             this.Controls.Add(this.tbX1);
+            this.Controls.Add(this.TdbtnUp);
+            this.Controls.Add(this.TibtnUp);
+            this.Controls.Add(this.SetbtnUp);
+            this.Controls.Add(this.KbtnUp);
             this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.Tdtb);
+            this.Controls.Add(this.Titb);
+            this.Controls.Add(this.Settb);
+            this.Controls.Add(this.Ktb);
             this.Controls.Add(this.tbX);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnStop);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Sample model";
+            this.Load += new System.EventHandler(this.OnLoadForm);
             ((System.ComponentModel.ISupportInitialize)(this.chMainPlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -334,6 +555,23 @@
         private System.Windows.Forms.Label Gout1;
         private System.Windows.Forms.Label Gin2;
         private System.Windows.Forms.Label Gin1;
+        private System.Windows.Forms.TextBox Ktb;
+        private System.Windows.Forms.Button KbtnUp;
+        private System.Windows.Forms.Button KbtnDown;
+        private System.Windows.Forms.Label K;
+        private System.Windows.Forms.TextBox Titb;
+        private System.Windows.Forms.Button TibtnUp;
+        private System.Windows.Forms.Button TibtnDown;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Tdtb;
+        private System.Windows.Forms.Button TdbtnUp;
+        private System.Windows.Forms.Button TdbtnDown;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Settb;
+        private System.Windows.Forms.Button SetbtnUp;
+        private System.Windows.Forms.Button SetbtnDown;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAuto;
     }
 }
 
