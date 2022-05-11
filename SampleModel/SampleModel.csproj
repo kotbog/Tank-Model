@@ -57,6 +57,7 @@
     <Compile Include="Blocks\IntBlock.cs" />
     <Compile Include="Blocks\LimitBlock.cs" />
     <Compile Include="Blocks\LimitedIntBlock.cs" />
+    <Compile Include="Blocks\ModifiedPIDBlock.cs" />
     <Compile Include="Blocks\NoiseBlock.cs" />
     <Compile Include="Blocks\PIDBlock.cs" />
     <Compile Include="Blocks\Tank.cs" />

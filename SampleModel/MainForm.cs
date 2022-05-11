@@ -79,10 +79,12 @@ namespace SampleModel
 
         private void btnStart_Click(object sender, EventArgs e) {
             tmModel.Start();
+            btnMod.Enabled = false;
         }
 
         private void btnStop_Click(object sender, EventArgs e) {
             tmModel.Stop();
+            
         }
 
         private void btnUp_Click(object sender, EventArgs e) {
@@ -186,6 +188,7 @@ namespace SampleModel
         private void DisplayManualMode()
         {
             btnAuto.Text = system.ManualMode ? "Manual" : "Auto";
+            btnMod.Text = system.ModifiedMode ? "Modified" : "Not Modified";
             btnDn1.Enabled = system.ManualMode;
             btnUp1.Enabled = system.ManualMode;
             tbX1.Enabled = system.ManualMode;
@@ -212,6 +215,36 @@ namespace SampleModel
         {
             DisplayManualMode();
             DisplayPidValues();
+        }
+
+        private void bBtnUp_Click(object sender, EventArgs e)
+        {
+            system.B += 0.1;
+            bTb.Text = system.B.ToString("F2");
+        }
+
+        private void bBtnDown_Click(object sender, EventArgs e)
+        {
+            system.B -= 0.1;
+            bTb.Text = system.B.ToString("F2");
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            system.ModifiedMode = !system.ModifiedMode;
+            DisplayManualMode();
+        }
+
+        private void CbtnUp_Click(object sender, EventArgs e)
+        {
+            system.C += 0.1;
+            cTb.Text = system.C.ToString("F2");
+        }
+
+        private void CdbtnDown_Click(object sender, EventArgs e)
+        {
+            system.C -= 0.1;
+            cTb.Text = system.C.ToString("F2");
         }
     }
 }

@@ -26,12 +26,12 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -71,6 +71,15 @@
             this.SetbtnDown = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAuto = new System.Windows.Forms.Button();
+            this.bTb = new System.Windows.Forms.TextBox();
+            this.bBtnUp = new System.Windows.Forms.Button();
+            this.bBtnDown = new System.Windows.Forms.Button();
+            this.cTb = new System.Windows.Forms.TextBox();
+            this.cBtnUp = new System.Windows.Forms.Button();
+            this.cBtnDown = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnMod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chMainPlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -134,35 +143,35 @@
             this.chMainPlot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "chMainArea";
-            this.chMainPlot.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chMainPlot.Legends.Add(legend1);
+            chartArea2.Name = "chMainArea";
+            this.chMainPlot.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chMainPlot.Legends.Add(legend2);
             this.chMainPlot.Location = new System.Drawing.Point(9, 60);
             this.chMainPlot.Margin = new System.Windows.Forms.Padding(2);
             this.chMainPlot.Name = "chMainPlot";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "chMainArea";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Y";
-            series1.Name = "seriesY";
-            series2.ChartArea = "chMainArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "SeriesX1";
-            series3.ChartArea = "chMainArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "SeriesX2";
-            series4.ChartArea = "chMainArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "SeriesX3";
-            this.chMainPlot.Series.Add(series1);
-            this.chMainPlot.Series.Add(series2);
-            this.chMainPlot.Series.Add(series3);
-            this.chMainPlot.Series.Add(series4);
+            series5.BorderWidth = 3;
+            series5.ChartArea = "chMainArea";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.LegendText = "Y";
+            series5.Name = "seriesY";
+            series6.ChartArea = "chMainArea";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "SeriesX1";
+            series7.ChartArea = "chMainArea";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "SeriesX2";
+            series8.ChartArea = "chMainArea";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "SeriesX3";
+            this.chMainPlot.Series.Add(series5);
+            this.chMainPlot.Series.Add(series6);
+            this.chMainPlot.Series.Add(series7);
+            this.chMainPlot.Series.Add(series8);
             this.chMainPlot.Size = new System.Drawing.Size(502, 359);
             this.chMainPlot.TabIndex = 5;
             // 
@@ -471,7 +480,7 @@
             // 
             // btnAuto
             // 
-            this.btnAuto.Location = new System.Drawing.Point(691, 299);
+            this.btnAuto.Location = new System.Drawing.Point(693, 258);
             this.btnAuto.Name = "btnAuto";
             this.btnAuto.Size = new System.Drawing.Size(75, 23);
             this.btnAuto.TabIndex = 13;
@@ -479,12 +488,103 @@
             this.btnAuto.UseVisualStyleBackColor = true;
             this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
+            // bTb
+            // 
+            this.bTb.Location = new System.Drawing.Point(557, 364);
+            this.bTb.Margin = new System.Windows.Forms.Padding(2);
+            this.bTb.Name = "bTb";
+            this.bTb.Size = new System.Drawing.Size(48, 20);
+            this.bTb.TabIndex = 2;
+            // 
+            // bBtnUp
+            // 
+            this.bBtnUp.Location = new System.Drawing.Point(610, 365);
+            this.bBtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.bBtnUp.Name = "bBtnUp";
+            this.bBtnUp.Size = new System.Drawing.Size(20, 19);
+            this.bBtnUp.TabIndex = 3;
+            this.bBtnUp.Text = ">";
+            this.bBtnUp.UseVisualStyleBackColor = true;
+            this.bBtnUp.Click += new System.EventHandler(this.bBtnUp_Click);
+            // 
+            // bBtnDown
+            // 
+            this.bBtnDown.Location = new System.Drawing.Point(532, 364);
+            this.bBtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.bBtnDown.Name = "bBtnDown";
+            this.bBtnDown.Size = new System.Drawing.Size(20, 19);
+            this.bBtnDown.TabIndex = 4;
+            this.bBtnDown.Text = "<";
+            this.bBtnDown.UseVisualStyleBackColor = true;
+            this.bBtnDown.Click += new System.EventHandler(this.bBtnDown_Click);
+            // 
+            // cTb
+            // 
+            this.cTb.Location = new System.Drawing.Point(668, 365);
+            this.cTb.Margin = new System.Windows.Forms.Padding(2);
+            this.cTb.Name = "cTb";
+            this.cTb.Size = new System.Drawing.Size(48, 20);
+            this.cTb.TabIndex = 2;
+            // 
+            // cBtnUp
+            // 
+            this.cBtnUp.Location = new System.Drawing.Point(721, 366);
+            this.cBtnUp.Margin = new System.Windows.Forms.Padding(2);
+            this.cBtnUp.Name = "cBtnUp";
+            this.cBtnUp.Size = new System.Drawing.Size(20, 19);
+            this.cBtnUp.TabIndex = 3;
+            this.cBtnUp.Text = ">";
+            this.cBtnUp.UseVisualStyleBackColor = true;
+            this.cBtnUp.Click += new System.EventHandler(this.CbtnUp_Click);
+            // 
+            // cBtnDown
+            // 
+            this.cBtnDown.Location = new System.Drawing.Point(643, 365);
+            this.cBtnDown.Margin = new System.Windows.Forms.Padding(2);
+            this.cBtnDown.Name = "cBtnDown";
+            this.cBtnDown.Size = new System.Drawing.Size(20, 19);
+            this.cBtnDown.TabIndex = 4;
+            this.cBtnDown.Text = "<";
+            this.cBtnDown.UseVisualStyleBackColor = true;
+            this.cBtnDown.Click += new System.EventHandler(this.CdbtnDown_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(554, 349);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "B";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(668, 349);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "C";
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(693, 300);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(75, 23);
+            this.btnMod.TabIndex = 13;
+            this.btnMod.Text = "Not Modified";
+            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 469);
+            this.Controls.Add(this.btnMod);
             this.Controls.Add(this.btnAuto);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -500,6 +600,8 @@
             this.Controls.Add(this.chMainPlot);
             this.Controls.Add(this.btnDn2);
             this.Controls.Add(this.btnDn1);
+            this.Controls.Add(this.cBtnDown);
+            this.Controls.Add(this.bBtnDown);
             this.Controls.Add(this.TdbtnDown);
             this.Controls.Add(this.TibtnDown);
             this.Controls.Add(this.SetbtnDown);
@@ -509,11 +611,15 @@
             this.Controls.Add(this.btnUp1);
             this.Controls.Add(this.tbX2);
             this.Controls.Add(this.tbX1);
+            this.Controls.Add(this.cBtnUp);
+            this.Controls.Add(this.bBtnUp);
             this.Controls.Add(this.TdbtnUp);
             this.Controls.Add(this.TibtnUp);
             this.Controls.Add(this.SetbtnUp);
             this.Controls.Add(this.KbtnUp);
             this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.cTb);
+            this.Controls.Add(this.bTb);
             this.Controls.Add(this.Tdtb);
             this.Controls.Add(this.Titb);
             this.Controls.Add(this.Settb);
@@ -572,6 +678,15 @@
         private System.Windows.Forms.Button SetbtnDown;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAuto;
+        private System.Windows.Forms.TextBox bTb;
+        private System.Windows.Forms.Button bBtnUp;
+        private System.Windows.Forms.Button bBtnDown;
+        private System.Windows.Forms.TextBox cTb;
+        private System.Windows.Forms.Button cBtnUp;
+        private System.Windows.Forms.Button cBtnDown;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnMod;
     }
 }
 
